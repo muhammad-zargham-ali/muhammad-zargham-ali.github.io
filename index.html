@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio and CV of Muhammad Zargham Ali, Control/System Engineer specializing in UAVs, automotive software, and embedded systems.">
+    <title>Muhammad Zargham Ali - Portfolio & CV</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        /* Responsive design for mobile, tablet, and PC */
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 1200px) {
+            html {
+                font-size: 15px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .nav-top ul {
+                gap: 0.2rem;
+                padding: 0.2rem 0.2rem;
+            }
+
+            .nav-top a {
+                font-size: 0.95rem;
+                padding: 0.3rem 0.7rem;
+            }
+        }
+
+        @media (max-width: 700px) {
+            html {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            h3 {
+                font-size: 0.9rem;
+            }
+
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .nav-top ul {
+                gap: 0.1rem;
+                padding: 0.1rem 0.1rem;
+            }
+
+            .nav-top a {
+                font-size: 0.85rem;
+                padding: 0.2rem 0.4rem;
+            }
+        }
+
+        /* Ensure sub-card boxes are always visible and styled */
+        .sub-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 120, 215, 0.10);
+            border: 1.5px solid #e3eaf2;
+            padding: 2em 2em 1.5em 2em;
+            margin-top: 2em;
+        }
+
+        .sub-card:first-child {
+            margin-top: 0;
+        }
+
+        /* Glassmorphism and vibrant theme enhancements */
+        .main-layout,
+        .right-panel,
+        .left-panel,
+        .tab-content.active,
+        .nav-top,
+        .skill-btn,
+        .education-degree,
+        .cv-link a {
+            backdrop-filter: blur(8px) saturate(120%);
+            -webkit-backdrop-filter: blur(8px) saturate(120%);
+        }
+
+        .right-panel,
+        .left-panel,
+        .tab-content.active {
+            border: 1.5px solid rgba(180, 199, 230, 0.18);
+        }
+
+        .tab-content.active {
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.85) 80%, rgba(227, 234, 242, 0.85) 100%);
+        }
+
+        .right-panel {
+            background: linear-gradient(135deg, #232b3e 70%, #0078d7 100%, #90cdf4 120%);
+        }
+
+        .left-panel {
+            background: linear-gradient(120deg, #f6f8fa 80%, #e3eaf2 100%, #b3c7e6 120%);
+        }
+
+        .nav-top {
+            background: linear-gradient(90deg, #e3eaf2 60%, #f6f8fa 100%, #b3c7e6 120%);
+        }
+
+        .nav-top a {
+            box-shadow: 0 4px 16px rgba(0, 120, 215, 0.10);
+            border: 1.5px solid rgba(180, 199, 230, 0.18);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        .nav-top a.active,
+        .nav-top a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px rgba(0, 120, 215, 0.22);
+        }
+
+        .skill-btn {
+            border: 1.5px solid rgba(180, 199, 230, 0.18);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        .skill-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 16px rgba(0, 120, 215, 0.18);
+        }
+
+        .education-degree {
+            border: 1.5px solid rgba(180, 199, 230, 0.18);
+        }
+
+        .cv-link a {
+            box-shadow: 0 4px 16px rgba(0, 120, 215, 0.18);
+            border: 1.5px solid rgba(180, 199, 230, 0.18);
+            transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        .cv-link a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px rgba(0, 120, 215, 0.22);
+        }
+
+        .profile-photo {
+            box-shadow: 0 8px 32px rgba(0, 120, 215, 0.22);
+            border: 2.5px solid #90cdf4;
+            transition: box-shadow 0.3s, border 0.3s;
+        }
+
+        .profile-photo:hover {
+            box-shadow: 0 12px 48px rgba(0, 120, 215, 0.32);
+            border: 2.5px solid #0078d7;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #e3eaf2 0%, #f6f8fa 100%);
+            color: #222;
+        }
+
+        .education-badge {
+            display: inline-block;
+            background: #e3eaf2;
+            color: #0056b3;
+            border-radius: 20px;
+            padding: 0.4em 1em;
+            margin: 0.2em 0.3em 0.2em 0;
+            font-size: 1em;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+            text-decoration: none;
+            border: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .education-badge:hover {
+            background: #c7dbf4;
+            color: #003366;
+            text-decoration: underline;
+        }
+
+        .main-layout {
+            display: flex;
+            min-height: 100vh;
+            background: none;
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .right-panel {
+            width: 255px;
+            min-width: 195px;
+            background: linear-gradient(135deg, #232b3e 70%, #0078d7 100%);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 0 24px 24px 0;
+            box-shadow: 0 4px 24px rgba(0, 120, 215, 0.18);
+            position: relative;
+            min-height: 100vh;
+            height: auto;
+            z-index: 2;
+            border-right: 4px solid #0078d7;
+            border-left: none;
+        }
+
+        .right-panel {
+            background: linear-gradient(135deg, #232b3e 70%, #0078d7 100%, #90cdf4 120%);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0, 120, 215, 0.18);
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .right-panel h1 br {
+            display: none;
+        }
+
+        .left-panel {
+            flex: 1 1 0%;
+            width: calc(100vw - 255px);
+            margin: 0;
+            background: linear-gradient(120deg, #f6f8fa 80%, #e3eaf2 100%);
+            padding: 2rem 2rem 2rem 2rem;
+            border-radius: 24px 0 0 24px;
+            box-shadow: 0 4px 24px rgba(0, 120, 215, 0.10);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: flex-start;
+            text-align: left;
+            height: auto;
+        }
+
+        .nav-top {
+            background: linear-gradient(90deg, #e3eaf2 60%, #f6f8fa 100%);
+            box-shadow: 0 2px 12px rgba(0, 120, 215, 0.08);
+            border-radius: 24px 0 0 0;
+            margin-bottom: 2rem;
+            padding: 0.5rem 0;
+            border-left: 4px solid #0078d7;
+            width: 100%;
+        }
+
+        .nav-top ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            gap: 1rem;
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .nav-top li {
+            margin: 0;
+            flex: 1 1 0;
+            display: flex;
+        }
+
+        .nav-top a {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #e3eaf2 80%, #b3c7e6 100%);
+            color: #1e2a38;
+            border-radius: 32px;
+            padding: 0.6rem 1.4rem;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 120, 215, 0.07);
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-top a.active,
+        .nav-top a:hover {
+            background: linear-gradient(90deg, #0078d7 60%, #0056b3 100%);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(0, 120, 215, 0.18);
+        }
+
+        .tab-content {
+            display: none;
+            margin-bottom: 2rem;
+        }
+
+        .tab-content.active {
+            display: block;
+            background: linear-gradient(120deg, #fff 80%, #e3eaf2 100%);
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(0, 120, 215, 0.10);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e3eaf2;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0078d7;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 8px #e3eaf2;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #1e2a38;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #b3c7e6;
+            box-shadow: 0 4px 16px rgba(0, 120, 215, 0.18);
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
+        .header-links a {
+            color: #fff !important;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s, background 0.2s;
+            font-weight: 500;
+            padding: 0.3em 0.7em;
+            border-radius: 18px;
+            background: rgba(0, 120, 215, 0.08);
+            color: #0056b3;
+            border: 1.5px solid #b3c7e6;
+        }
+
+        .header-links a:hover {
+            color: #fff;
+            background: rgba(0, 120, 215, 0.18);
+            color: #0078d7;
+            border: 1.5px solid #90cdf4;
+        }
+
+        .contact-info {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .contact-info li {
+            list-style: none;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            padding-left: 0;
+        }
+
+        .cv-link {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .cv-link a {
+            background: linear-gradient(90deg, #0078d7 60%, #232b3e 100%);
+            color: #fff;
+            padding: 0.4em 1.2em;
+            border-radius: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+            transition: background 0.2s;
+        }
+
+        .cv-link a:hover {
+            background: linear-gradient(90deg, #0056b3 60%, #0078d7 100%);
+        }
+
+        @media (max-width: 900px) {
+            .main-layout {
+                flex-direction: column;
+            }
+
+            .right-panel {
+                max-width: 100%;
+                border-radius: 16px 16px 0 0;
+                position: static;
+                height: auto;
+                border-right: none;
+            }
+
+            .left-panel {
+                border-radius: 0 0 16px 16px;
+                margin-left: 0;
+                width: 100vw;
+            }
+
+            .nav-top ul {
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+
+            .experience-card,
+            .education-card,
+            .skill-card,
+            .publication-card,
+            .test-card,
+            .activity-card,
+            .reference-card {
+                padding: 1rem 0.5rem;
+            }
+        }
+
+        .tab-content p {
+            text-align: justify;
+        }
+
+        /* Remove book icon from tab headings */
+        .tab-content h2::before {
+            content: "";
+            display: none;
+        }
+
+        /* Skill button styles */
+        .skill-btn {
+            display: inline-block;
+            background: #e3eaf2;
+            color: #0056b3;
+            border: none;
+            border-radius: 20px;
+            padding: 0.4em 1em;
+            margin: 0.2em 0.3em 0.2em 0;
+            font-size: 1em;
+            font-weight: 500;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+            cursor: default;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        /* Responsive improvements for all devices */
+        @media (max-width: 1200px) {
+            .main-layout {
+                flex-direction: column;
+                min-height: unset;
+            }
+
+            .right-panel {
+                width: 100%;
+                min-width: unset;
+                border-radius: 16px 16px 0 0;
+                border-right: none;
+                border-left: none;
+                min-height: unset;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+                padding: 1.5rem 1rem;
+            }
+
+            .left-panel {
+                width: 100vw;
+                border-radius: 0 0 16px 16px;
+                margin-left: 0;
+                padding: 1.2rem 0.5rem 2rem 0.5rem;
+                box-shadow: none;
+            }
+
+            .skill-btn {
+                display: inline-block;
+                background: linear-gradient(90deg, #e3eaf2 80%, #b3c7e6 100%);
+                color: #0056b3;
+                border: none;
+                border-radius: 20px;
+                padding: 0.4em 1em;
+                margin: 0.2em 0.3em 0.2em 0;
+                font-size: 1em;
+                font-weight: 500;
+                box-shadow: 0 2px 8px rgba(0, 120, 215, 0.07);
+                cursor: default;
+                transition: background 0.2s, color 0.2s;
+            }
+
+            .skill-btn:hover {
+                background: linear-gradient(90deg, #b3c7e6 80%, #e3eaf2 100%);
+                color: #003366;
+            }
+
+            .profile-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            .nav-top ul {
+                gap: 0.2rem;
+                padding: 0.2rem 0.2rem;
+            }
+
+            .nav-top a {
+                font-size: 0.95rem;
+                padding: 0.3rem 0.7rem;
+            }
+
+            .experience-card,
+            .education-card,
+            .skill-card,
+            .publication-card,
+            .test-card,
+            .activity-card,
+            .reference-card {
+                padding: 0.7rem 0.3rem;
+                font-size: 0.98em;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .skills-logos {
+                flex-wrap: wrap;
+                gap: 0.3em;
+                justify-content: flex-start;
+            }
+
+            .skills-logos img {
+                width: 28px !important;
+                height: 28px !important;
+            }
+
+            .profile-photo {
+                width: 60px;
+                height: 60px;
+            }
+
+            h1 {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            h3 {
+                font-size: 0.9rem;
+            }
+        }
+
+        .skill-btn:hover {
+            background: #c7dbf4;
+            color: #003366;
+        }
+
+        .education-degree {
+            display: inline-block;
+            background: linear-gradient(90deg, #e3eaf2 80%, #f6f8fa 100%);
+            color: #333;
+            border-radius: 16px;
+            padding: 0.3em 0.8em;
+            margin: 0.2em 0.3em 0.2em 0;
+            font-size: 1em;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 120, 215, 0.07);
+        }
+
+        .education-card {
+            background: #fff;
+            color: #222;
+            border-radius: 16px;
+            padding: 1.5em 2em;
+            margin-bottom: 2.2em;
+            box-shadow: 0 2px 12px rgba(0, 120, 215, 0.10);
+            border: 1.5px solid #e3eaf2;
+            font-size: 1.08em;
+        }
+
+        .education-card:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-layout">
+        <div class="right-panel">
+            <img src="resources/pic.jpg" alt="Muhammad Zargham Ali Photo" class="profile-photo">
+            <h1>Muhammad Zargham Ali</h1>
+            <p>Control / System Engineer</p>
+            <div class="header-links">
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="mailto:alizargham117@gmail.com"
+                    title="Email"><span>✉</span> alizargham117@gmail.com</a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;"
+                    href="https://www.linkedin.com/in/m-zargham-ali-3a91a314a" target="_blank"
+                    title="LinkedIn"><span>in</span> LinkedIn</a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;"
+                    href="https://scholar.google.com/citations?user=Vs7_q2MAAAAJ&hl=en" target="_blank"
+                    title="Google Scholar">
+                    <img src="https://www.gstatic.com/images/icons/material/system/2x/school_black_36dp.png"
+                        alt="Google Scholar" width="20" height="20"
+                        style="vertical-align:middle; margin-right:6px; filter: invert(1) brightness(2);"> Google
+                    Scholar
+                </a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="tel:+923125217355"
+                    title="Phone"><span>☏</span> +92 312 5217355</a>
+                <a style="font-size:0.95em; color:#fff; text-decoration:none;" href="#" title="Location"><span>⚲</span>
+                    Faisalabad, Pakistan</a>
+            </div>
+            <div class="skills-logos"
+                style="display:flex; flex-wrap:wrap; gap:0.7em; justify-content:center; align-items:center; margin:1em 0 0.5em 0;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"
+                    width="48" height="48" title="C++">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB"
+                    width="48" height="48" title="MATLAB">
+                <img src="resources/ardu.png" alt="ArduPilot" width="48" height="48" title="ArduPilot">
+                <img src="https://cubepilot.com/assets/icons/logo.png" alt="CubePilot" width="48" height="48"
+                    title="CubePilot (Pixhawk)">
+                <img src="resources/mp.jpeg" alt="Mission Planner" width="48" height="48" title="Mission Planner">
+                <img src="https://raw.githubusercontent.com/mavlink/qgroundcontrol/master/resources/icons/qgroundcontrol.ico"
+                    alt="QGroundControl" width="48" height="48" title="QGroundControl">
+                <img src="resources/px4.png" alt="PX4" width="48" height="48" title="PX4 Autopilot">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino"
+                    width="48" height="48" title="Arduino">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                    width="48" height="48" title="Python">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"
+                    width="48" height="48" title="VSCode">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="48"
+                    height="48" title="Git">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab"
+                    width="48" height="48" title="GitLab">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"
+                    width="48" height="48" title="Linux">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"
+                    width="48" height="48" title="Docker">
+            </div>
+            <p class="cv-link">
+                <a href="resources/CV_Muhammad_Zargham_Ali.pdf" target="_blank" style="
+                    display:inline-block;
+                    font-size:0.95em;
+                    color:#fff;
+                    background:linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+                    border:none;
+                    border-radius:1.2em;
+                    padding:0.5em 1.2em;
+                    font-weight:500;
+                    text-decoration:none;
+                    box-shadow:0 2px 8px rgba(25,118,210,0.08);
+                    transition:background 0.2s;
+                " onmouseover="this.style.background='#1565c0';"
+                    onmouseout="this.style.background='linear-gradient(90deg, #1976d2 60%, #64b5f6 100%)';">
+                    Download CV (PDF)
+                </a>
+            </p>
+        </div>
+        <div class="left-panel">
+            <nav class="nav-top">
+                <ul>
+                    <li><a class="active" onclick="showTab('highlights'); return false;">Personal Highlights</a></li>
+                    <li><a onclick="showTab('experience'); return false;">Experience</a></li>
+                    <li><a onclick="showTab('education'); return false;">Education</a></li>
+                    <li><a onclick="showTab('skills'); return false;">Technical Skills</a></li>
+                    <li><a onclick="showTab('publication'); return false;">Publication</a></li>
+                    <li><a onclick="showTab('tests'); return false;">Standardized Tests</a></li>
+                    <li><a onclick="showTab('activities'); return false;">Extracurricular</a></li>
+                    <li><a onclick="showTab('references'); return false;">References</a></li>
+                </ul>
+            </nav>
+            <section id="highlights" class="tab-content active">
+                <h2>Personal Highlights</h2>
+                <div class="card-inner"
+                    style="background:#f6f8fa; border-radius:12px; box-shadow:0 1px 8px rgba(0,120,215,0.07); border:1px solid #e3eaf2; padding:1.2em 1.5em;">
+                    <div class="sub-card" style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap;">
+                        <div
+                            style="flex:1; min-width:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                            <img src="resources/auto_D.gif" alt="Quadcopter"
+                                style="width:210px; height:150px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
+                        </div>
+                        <div
+                            style="flex:2; min-width:260px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                            <blockquote
+                                style="font-size:1.15em; font-weight:bold; font-style:italic; color:#222; text-align:justify; margin:0 auto; max-width:520px; padding:0.5em 0;">
+                                With over five years of experience in control systems, UAV avionics integration, and
+                                automotive software, I specialize in bridging hardware and software for autonomous
+                                systems. My background includes developing custom flight control algorithms,
+                                implementing SIL-tested ADAS features for OEMs like BYD and GM, and validating
+                                safety-critical software. Skilled in embedded C++, MATLAB/Simulink, Git, and AUTOSAR, I
+                                bring strong expertise in control algorithm design, debugging, and system integration.
+                            </blockquote>
+                        </div>
+                        <div
+                            style="flex:1; min-width:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                            <img src="resources/auto_V.gif" alt="Autonomous Vehicle"
+                                style="width:210px; height:150px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
+                        </div>
+                    </div>
+                    <!-- Academic Projects Highlight -->
+                    <div class="sub-card">
+                        <h3 style="text-align:center;">Academic Projects</h3>
+                        <div class="sub-card" style="margin-top:0;">
+                            <h4 style="text-align:center;"><span spellcheck="false">Quadcopter 3D Simulator using
+                                    MATLAB</span></h4>
+                            <div style="display:flex; gap:1.5em; justify-content:center; margin-bottom:1em;
+                                flex-wrap:wrap;">
+                                <img src="resources/quadsim.jpg" alt="3D Simulator"
+                                    style="max-width:100%; width:340px; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.10);">
+                                <img src="resources/controller.png" alt="Control System Design in Simulink"
+                                    style="max-width:100%; width:340px; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.10);"
+                                    spellcheck="false">
+                                <img src="resources/plot2.png" alt="Trajectory Plots Analysis"
+                                    style="max-width:100%; width:340px; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.10);">
+                                <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
+                                    <li>Developed a full 3D <span spellcheck="false">quadcopter</span> simulator in
+                                        MATLAB for rapid prototyping and validation of flight control algorithms.</li>
+                                    <li>Designed and tuned advanced control systems in <span
+                                            spellcheck="false">Simulink</span>, including PID and state-space
+                                        controllers.</li>
+                                    <li>Visualized and analyzed flight trajectories, system responses, and disturbance
+                                        rejection in real time.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-card">
+                            <h4 style="text-align:center;"><span spellcheck="false">Research Paper on Quadcopter
+                                    Modelling & Nonlinear Control at IFAC 2020 </span></h4>
+                            <div style="display:flex; flex-direction:column; align-items:center; width:100%;">
+                                <a href="https://doi.org/10.1016/j.ifacol.2020.12.1397" target="_blank">
+                                    <img src="resources/ifac202.png" alt="IFAC 2020"
+                                        style="max-width:100%; width:500px; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.10); margin-bottom:1em;">
+                                </a>
+                                <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
+                                    <li>Addresses the challenge of <span spellcheck="false">unmodelled</span> dynamics
+                                        and disturbances in <span spellcheck="false">quadcopter</span> UAV control.</li>
+                                    <li>Derives a comprehensive nonlinear model with minimal approximations, capturing
+                                        full <span spellcheck="false">quadcopter</span> dynamics.</li>
+                                    <li>Proposes a novel feedback <span spellcheck="false">linearization</span>-based
+                                        nonlinear controller, cascaded with sliding mode and <span
+                                            spellcheck="false">backstepping</span> control for robustness.</li>
+                                    <li>Demonstrates improved performance over conventional controllers, especially
+                                        under disturbances and parameter variations.</li>
+                                    <li>Includes simulation results validating the effectiveness of the proposed
+                                        approach.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-card">
+                        <h3 style="text-align:center;">Industry Projects</h3>
+                        <div class="sub-card" style="margin-top:0;">
+                            <h4 style="text-align:center;">ISR Surveillance UAV</h4>
+                            <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                                <img src="resources/ISR.jpg" alt="ISR Surveillance UAV"
+                                    style="width:360px; height:247px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
+                                <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
+                                    <li><strong>Custom software:</strong> Implemented software updates to optimize
+                                        target identification and tracking during long-duration flights.</li>
+                                    <li><strong>Firmware adaptation:</strong> Modified flight control algorithms for
+                                        enhanced stability and tailored ISR mission requirements.</li>
+                                    <li><strong>Deployment:</strong> Delivered and validated the platform in active
+                                        surveillance operations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-card">
+                            <h4 style="text-align:center;">Payload Delivery UAV</h4>
+                            <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                                <img src="resources/PD.jpg" alt="Payload Delivery UAV"
+                                    style="width:360px; height:247px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
+                                <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
+                                    <li><strong>Precision drop algorithms:</strong> Developed and integrated custom
+                                        C++ modules in ArduPilot for accurate payload release.</li>
+                                    <li><strong>Field trial validation:</strong> Led software modifications and
+                                        testing to meet Army qualification standards.</li>
+                                    <li><strong>Operational integration:</strong> Supported deployment and
+                                        troubleshooting in live combat scenarios.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sub-card">
+                            <h4 style="text-align:center;">Kamikaze Drone</h4>
+                            <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                                <img src="resources/kam.jpg" alt="Kamikaze Drone"
+                                    style="width:360px; height:247px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
+                                <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
+                                    <li><strong>Autonomous targeting logic:</strong> Implemented target
+                                        identification and locking routines by extending ArduPilot’s C++ codebase.
+                                    </li>
+                                    <li><strong>Dive maneuver programming:</strong> Designed and coded custom
+                                        descent and attack trajectory modules for mission-specific operations.</li>
+                                    <li><strong>Field deployment:</strong> Provided direct software support and
+                                        validation during operational missions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-card">
+                        <h3 style="text-align:center;">Innovation in Avionics & Manufacturing</h3>
+                        <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                            <img src="resources/avn.png" alt="Avionics Manufacturing"
+                                style="width:540px; height:371px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-bottom:1em;">
+                            <p style="max-width:600px; text-align:left;">Developed custom flight control code,
+                                adapted open-source platforms, and built a Chinese supply chain for avionics
+                                sourcing. Oversaw production and rigorous QA for military-grade reliability.</p>
+                        </div>
+                    </div>
+                    <div class="sub-card">
+                        <h3 style="text-align:center;">Product Field Trials Deployment</h3>
+                        <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                            <div
+                                style="display:flex; gap:1.5em; justify-content:center; margin-bottom:1em; flex-wrap:wrap;">
+                                <img src="resources/trl1.jpg" alt="Field Trial 1"
+                                    style="width:400px; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10);">
+                                <img src="resources/trl2.jpg" alt="Field Trial 2"
+                                    style="width:400px; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10);">
+                                <img src="resources/trl3.jpg" alt="Field Trial 3"
+                                    style="width:400px; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10);">
+                            </div>
+                            <ul style="margin:0; padding-left:1.2em; text-align:left; max-width:600px;">
+                                <li>Validated UAVs in desert, coastal, and high-altitude terrains.</li>
+                                <li>Successful deployments with Pakistan Army, Navy, and Artillery Directorate.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-card">
+                        <h3 style="text-align:center;">Training & Knowledge Transfer</h3>
+                        <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                            <div
+                                style="display:flex; gap:1.5em; justify-content:center; margin-bottom:1em; flex-wrap:wrap;">
+                                <img src="resources/trg1.jpg" alt="Training 1"
+                                    style="width:400px; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10);">
+                                <img src="resources/trg2.jpg" alt="Training 2"
+                                    style="width:400px; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10);">
+                                <img src="resources/trg3.jpg" alt="Training 3"
+                                    style="width:400px; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.10);">
+                            </div>
+                            <p style="max-width:600px; text-align:left;">Conducted hands-on workshops and regular
+                                training for Army aviation technicians, ensuring sustainable UAV operations and
+                                maintenance expertise within the military.</p>
+                        </div>
+                    </div>
+                    <div class="sub-card"
+                        style="background:#f6f8fa; border-radius:8px; box-shadow:0 1px 6px rgba(0,120,215,0.07); border:1px solid #e3eaf2; padding:1em 1.2em; margin-top:1.5em; min-height:80px; text-align:center; color:#888; font-style:italic;">
+                        More projects and highlights coming soon...
+                    </div>
+                </div>
+            </section>
+            <section id="experience" class="tab-content">
+                <h2>Experience</h2>
+                <div class="experience-card"
+                    style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.5em 2em; display: flex; align-items: flex-start; gap: 1.2em; margin-bottom:1em;">
+                    <img src="resources/logo_sw.png" alt="Software Motion Logo"
+                        style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0; display:flex; justify-content:space-between; align-items:center;">
+                            Software Motion
+                            <span style="text-align:right; flex-shrink:0;"> (Remote) Shanghai, China</span>
+                        </h3>
+                        <div class="experience-card"
+                            style="background:#f6f8fa; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
+                            <strong>Control Engineer</strong> <em>(Dec 2024 – Present)</em>
+                            <ul>
+                                <li>Delivering production-grade ADAS features in C++ with SIL testing, unit validation,
+                                    and real-world data debugging for top automotive OEMs.</li>
+                                <li>Design and implement ADAS functionalities in C++, including: Front Collision Warning
+                                    (FCW), Autonomous Emergency Braking (AEB), Adaptive Cruise Control (ACC), Lane Keep
+                                    Assist (LKA), Traffic Sign Recognition (TSR).</li>
+                                <li>Develop unit tests using the Google Test framework (gTest) to verify software
+                                    functionality against defined requirements and safety use cases.</li>
+                                <li>Perform Software-in-the-Loop (SIL) testing using real-world driving data to evaluate
+                                    and refine algorithm performance.</li>
+                                <li>Analyze real vehicle test data using tools such as TS Master to debug abnormal
+                                    behavior of ADAS functions and implement corrective logic in the embedded software.
+                                </li>
+                                <li>Maintain and manage GitLab code repositories for different ADAS modules, with full
+                                    command-line expertise in Git version control, branching strategies, and CI
+                                    workflows.</li>
+                                <li>Simulate and validate control strategies in MATLAB/Simulink, followed by integration
+                                    with AUTOSAR-compliant systems for production readiness.</li>
+                                <li>Collaborate with cross-functional teams to deliver solutions for major OEMs,
+                                    including BYD, GM, and Ford.</li>
+                                <li>Support technical onboarding of new employees, assist in technical interviews, and
+                                    mentor junior engineers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card"
+                    style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.5em 2em; display: flex; align-items: flex-start; gap: 1.2em; ">
+                    <img src="resources/logo_nes.png" alt="NCUAS Logo"
+                        style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0; display:flex; justify-content:space-between; align-items:center;">
+                            National Center for Unmanned Aerial Systems (NCUAS)
+                            <span style="text-align:right; flex-shrink:0;"> Islamabad, Pakistan</span>
+                        </h3>
+                        <div class="experience-card"
+                            style="background:#f6f8fa; margin-bottom:1.2em; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
+                            <strong>Manager - Senior System Engineer</strong> <em>(Dec 2021 – Dec 2024)</em>
+                            <ul>
+                                <li>Led design, testing, and deployment of autonomous multirotor platforms with custom
+                                    ArduPilot firmware for advanced targeting and payload delivery.</li>
+                                <li>Oversaw UAV avionics manufacturing lines, ensuring integration consistency, system
+                                    robustness, and compliance with operational requirements.</li>
+                                <li>Engineered custom control algorithms for precision payload delivery to designated
+                                    target areas using multirotor UAVs.</li>
+                                <li>Developed and integrated auto-target locking functionality using image processing,
+                                    camera gimbal control, and custom ArduPilot firmware enhancements.</li>
+                                <li>Designed and implemented dive maneuver algorithms in ArduPilot for mission-specific
+                                    autonomous descent and targeting applications.</li>
+                                <li>Executed and supervised live flight trials across varied terrains and environmental
+                                    conditions to validate mission readiness.</li>
+                                <li>Delivered production-grade UAV platforms currently operational in military
+                                    applications.</li>
+                                <li>Functioned as the key bridge between control software, embedded avionics, and
+                                    testing teams.</li>
+                            </ul>
+                        </div>
+                        <div class="experience-card"
+                            style="background:#f6f8fa; box-shadow:0 1px 6px rgba(0,120,215,0.07); border-radius:12px; padding:1em 1.5em;">
+                            <strong>Assistant Manager - System Engineer</strong> <em>(Nov 2019 – Dec 2021)</em>
+                            <ul>
+                                <li>Developed and tested UAV avionics systems, integrated payloads, and ensured platform
+                                    readiness through calibration, validation, and pre-mission checks.</li>
+                                <li>Integrated diverse camera payloads with multirotor UAV platforms using custom
+                                    MAVLink protocols and extended ArduPilot open-source flight stack.</li>
+                                <li>Developed and embedded custom libraries for real-time data transmission from UAV to
+                                    Ground Control Station (GCS).</li>
+                                <li>Led Avionics manufacturing oversight: validated and inspected flight-critical
+                                    modules, including Flight Controllers, Companion Computers, Power Management Units,
+                                    Radio Links, and Camera systems.</li>
+                                <li>Executed pre-flight calibration and tuning, including compass offsets, level
+                                    alignment, and sensor configuration.</li>
+                                <li>Performed bench-level avionics validation and full-stack UAV system tests, ensuring
+                                    signal integrity, redundancy, and uninterrupted power distribution.</li>
+                                <li>Delivered field-ready surveillance UAVs currently deployed by the military for
+                                    aerial monitoring.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education" class="tab-content">
+                <h2>Education</h2>
+                <div class="education-card"
+                    style="margin-bottom:1em; display: flex; align-items: flex-start; gap: 1.2em;">
+                    <img src="resources/logo_p.png" alt="PIEAS Logo"
+                        style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0;">Pakistan Institute of Engineering and Applied Sciences (PIEAS),
+                            Islamabad, Pakistan</h3>
+                        <h4>M.S. Systems Engineering <em>(2017 - 2019)</em></h4>
+                        <div style="margin:0.7em 0 0.7em 0;">
+                            <span class="education-badge">GPA: 3.77 / 4.0</span>
+                            <span class="education-badge">Second Best Thesis Award</span>
+                            <span class="education-badge">Research Published at IFAC World Congress 2020</span>
+                            <span class="education-badge">Teaching Assistant</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card" style="display: flex; align-items: flex-start; gap: 1.2em;">
+                    <img src="resources/logo_n.png" alt="NUST Logo"
+                        style="width:56px; height:56px; object-fit:contain; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,0.10); margin-top:2px;">
+                    <div style="flex:1;">
+                        <h3 style="margin-top:0;">National University of Sciences & Technology (NUST), Islamabad,
+                            Pakistan</h3>
+                        <h4>B.E. Electrical Engineering <em>(2013 - 2017)</em></h4>
+                        <div style="margin:0.7em 0 0.7em 0;">
+                            <span class="education-badge">GPA: 3.68 / 4.0</span>
+                            <span class="education-badge">Silver Medal</span>
+                            <span class="education-badge">Merit-based Scholarship</span>
+                            <span class="education-badge">Electronic Nose Prototype</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="skills" class="tab-content">
+                <h2>Technical Skills</h2>
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <span class="skill-btn">Python</span>
+                    <span class="skill-btn">C++</span>
+                    <span class="skill-btn">MATLAB</span>
+                    <span class="skill-btn">Simulink</span>
+                    <span class="skill-btn">Embedded C</span>
+                    <span class="skill-btn">Shell Scripting</span>
+                    <span class="skill-btn">LaTeX</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Control & Robotics</h3>
+                    <span class="skill-btn">Control Systems</span>
+                    <span class="skill-btn">System Identification</span>
+                    <span class="skill-btn">State Estimation</span>
+                    <span class="skill-btn">Optimization</span>
+                    <span class="skill-btn">Signal Processing</span>
+                    <span class="skill-btn">Kalman Filtering</span>
+                    <span class="skill-btn">PID Tuning</span>
+                    <span class="skill-btn">Trajectory Planning</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Machine Learning & AI</h3>
+                    <span class="skill-btn">Machine Learning</span>
+                    <span class="skill-btn">Deep Learning</span>
+                    <span class="skill-btn">Computer Vision</span>
+                    <span class="skill-btn">TensorFlow</span>
+                    <span class="skill-btn">PyTorch</span>
+                    <span class="skill-btn">Scikit-learn</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Embedded & Software Tools</h3>
+                    <span class="skill-btn">Embedded Systems</span>
+                    <span class="skill-btn">RTOS</span>
+                    <span class="skill-btn">ROS</span>
+                    <span class="skill-btn">Git</span>
+                    <span class="skill-btn">Linux</span>
+                    <span class="skill-btn">AUTOSAR</span>
+                    <span class="skill-btn">Google Test (gTest)</span>
+                </div>
+                <div class="skill-card">
+                    <h3>Other Skills</h3>
+                    <span class="skill-btn">Technical Writing</span>
+                    <span class="skill-btn">Project Management</span>
+                    <span class="skill-btn">Data Analysis</span>
+                    <span class="skill-btn">Teaching & Mentoring</span>
+                </div>
+            </section>
+            <section id="publication" class="tab-content">
+                <h2>Publication</h2>
+                <div class="publication-card">
+                    <a href="https://doi.org/10.1016/j.ifacol.2020.12.1397" target="_blank" class="education-badge"
+                        style="display:inline-block; margin-bottom:0.7em;">
+                        <strong>Ali, M. Z.</strong>, Ahmed, A., & Afridi, H. K. (2020). Control system analysis and
+                        design of quadcopter in the presence of unmodelled dynamics and disturbances. IFAC-PapersOnLine,
+                        53(2), 8840–8846
+                    </a>
+                </div>
+            </section>
+            <section id="tests" class="tab-content">
+                <h2>Standardized Tests</h2>
+                <div class="test-card"
+                    style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.2em 1.5em; margin-bottom:1em;">
+                    <strong>GRE</strong><br>
+                    <span class="education-badge">Total: 319</span>
+                    <span class="education-badge">Quantitative: 162</span>
+                    <span class="education-badge">Verbal: 157</span>
+                </div>
+                <div class="test-card"
+                    style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.2em 1.5em;">
+                    <strong>IELTS</strong><br>
+                    <span class="education-badge">Overall Band: 8.0</span>
+                </div>
+            </section>
+            <section id="activities" class="tab-content">
+                <div class="activity-card"
+                    style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.2em 1.5em; margin-bottom:1em;">
+                    <strong>Swimming</strong><br>
+                    Achieved top positions in university-level swimming competitions, demonstrating discipline,
+                    teamwork, and commitment to excellence.
+                </div>
+                <div class="activity-card"
+                    style="background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(0,120,215,0.10); border:1.5px solid #e3eaf2; padding:1.2em 1.5em;">
+                    <strong>Community Volunteering</strong><br>
+                    Actively participated in organizing and volunteering for blood donation campaigns and scholarship
+                    fundraising initiatives, supporting student welfare and community health.
+                </div>
+            </section>
+            <section id="references" class="tab-content">
+                <h2>References</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5em; justify-content: flex-start;"></div>
+                <div class="reference-card"
+                    style="background: #f6f8fa; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,120,215,0.10); border: 1.5px solid #e3eaf2; padding: 1.2em 1.5em; min-width: 260px; flex: 1 1 260px; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer;"
+                    onmouseover="this.style.boxShadow='0 8px 32px rgba(0,120,215,0.18)';this.style.transform='scale(1.03)';"
+                    onmouseout="this.style.boxShadow='0 2px 12px rgba(0,120,215,0.10)';this.style.transform='scale(1)';">
+                    <div style="display: flex; align-items: center; gap: 1em;">
+                        <img src="resources/erfan.jpeg" alt="Erfan Nejabat"
+                            style="width:48px; height:48px; border-radius:50%; object-fit:cover; box-shadow:0 1px 6px rgba(0,120,215,0.10);">
+                        <div>
+                            <strong>Erfan Nejabat</strong><br>
+                            <span style="color:#0078d7;">Supervisor, Software Motion</span><br>
+                            <span class="education-badge" style="margin-top:0.3em;">erfan.nejabat@sw-motion.cn</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reference-card"
+                    style="background: #f6f8fa; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,120,215,0.10); border: 1.5px solid #e3eaf2; padding: 1.2em 1.5em; min-width: 260px; flex: 1 1 260px; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer;"
+                    onmouseover="this.style.boxShadow='0 8px 32px rgba(0,120,215,0.18)';this.style.transform='scale(1.03)';"
+                    onmouseout="this.style.boxShadow='0 2px 12px rgba(0,120,215,0.10)';this.style.transform='scale(1)';">
+                    <div style="display: flex; align-items: center; gap: 1em;">
+                        <img src="resources/abid.jpeg" alt="Prof. Dr. M. Abid"
+                            style="width:48px; height:48px; border-radius:50%; object-fit:cover; box-shadow:0 1px 6px rgba(0,120,215,0.10);">
+                        <div>
+                            <strong>Prof. Dr. M. Abid</strong><br>
+                            <span style="color:#0078d7;">Thesis Supervisor, PIEAS</span><br>
+                            <span class="education-badge" style="margin-top:0.3em;">mabid@pieas.edu.pk</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+    </div>
+    </div>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(function (tab) {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            document.querySelectorAll('nav a').forEach(function (link) {
+                link.classList.remove('active');
+            });
+            document.querySelector('nav a[href="#' + tabId + '"]').classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
